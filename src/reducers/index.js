@@ -1,19 +1,8 @@
-import { ADD_TODO } from "../actions/constant";
+import { combineReducers } from "redux";
+import { todos } from "./todo";
+import { visibilityFilter } from "./visibilityFilter";
 
-const initialState = 
-  {
-    text: "",
-    completed: false
-  };
-
-const todos = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_TODO:
-      return { ...state, text: action.payload };
-
-    default:
-      return state;
-  }
-};
-
-export default todos;
+export default combineReducers({
+  todos,
+  visibilityFilter
+});

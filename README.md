@@ -1,3 +1,9 @@
+Task Master is a personal project learning Redux and React-redux, performing the CRUD function in a Todo App
+
+you can check out the demo here:
+
+https://nickyiliwang.github.io/taskMaster-deploy/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

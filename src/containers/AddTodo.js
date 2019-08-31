@@ -1,28 +1,44 @@
 import React from "react";
-import { addTodo } from "../actions";
 import { connect } from "react-redux";
+import { addItem } from "../actions";
 
 const AddTodo = ({ dispatch }) => {
   let input;
+
   return (
-    <form
-      onSubmit={e => {
-        e.preventDefault();
-        if (!input.value.trim()) {
-          return;
-        }
-        dispatch(addTodo(input.value));
-        input.value = "";
-      }}
-    >
-      <input
-        ref={node => {
-          input = node;
+    <div>
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          if (!input.value.trim()) {
+            return;
+          }
+          dispatch(addItem(input.value));
+          input.value = "";
         }}
-      />
-      <button type="submit">Add Todo</button>
-      <button type="reset">Reset</button>
-    </form>
+        className="ui inverted segment"
+      >
+        <div className="ui inverted fluid action input">
+          <input
+            id="task-input"
+            type="text"
+            placeholder="Enter Task ..."
+            ref={node => {
+              input = node;
+            }}
+          />
+          <button type="submit" className="ui button primary">
+            ADD
+          </button>
+          <button
+            type="reset"
+            className="ui button negative"
+          >
+            RESET
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 
