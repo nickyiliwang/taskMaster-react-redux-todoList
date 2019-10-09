@@ -5,7 +5,7 @@ import {
   VisibilityFilters,
   deleteItem,
   editItem
-} from "../actions";
+} from "../Redux/actions";
 
 const getVisibleTodos = (todos, filter) => {
   switch (filter) {
@@ -20,17 +20,23 @@ const getVisibleTodos = (todos, filter) => {
   }
 };
 
+const handleOnclick = (todoId) => {
+todos.
+
+  // document.getElementById("task-input").value = e.target.value;
+  // editItem(this.props.todo.id);
+};
+
 const RenderList = ({ todos, toggleItem, deleteItem, editItem }) => (
   <div className="ui massive middle aligned divided list">
     {todos.map(todo => {
       return (
         <div className="item" key={todo.id}>
-
           <div className="right floated content">
             <div
               className="ui button primary"
               id="editBtn"
-              onClick={() => editItem(todo.id)}
+              onClick={handleOnclick(todo.id)}
             >
               <i className="pencil icon" />
               Edit

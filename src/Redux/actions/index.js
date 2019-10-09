@@ -23,6 +23,11 @@ export const editItem = id => ({
   id
 });
 
+export const updateItem = id => ({
+  type: "UPDATE_ITEM",
+  id
+});
+
 export const setVisibilityFilter = filter => ({
   type: "SET_VISIBLE_FILTER",
   payload: filter

@@ -1,6 +1,7 @@
-import { connect } from "react-redux";
-import { setVisibilityFilter } from "../actions";
 import React from "react";
+// Redux
+import { setVisibilityFilter } from "../Redux/actions";
+import { connect } from "react-redux";
 
 const Link = ({ active, children, onClick }) => (
   // children refers to the text inside the Component
